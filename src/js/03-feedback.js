@@ -28,7 +28,8 @@ const sendData = e => {
 };
 
 const updateKeys = e => {
-  if (objData !== undefined) {
+  const haveData = loadKey(keyForm);
+  if (haveData !== undefined) {
     const key = loadKey(keyForm);
     key.email = inputEmail.value;
     key.message = textarea.value;
